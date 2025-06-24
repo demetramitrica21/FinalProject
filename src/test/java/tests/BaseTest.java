@@ -7,6 +7,8 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import propertyUtility.PropertyUtility;
 
+import java.lang.reflect.Method;
+
 import static extentUtility.ExtentHelper.*;
 
 public class BaseTest {
@@ -22,13 +24,13 @@ public class BaseTest {
 
     @BeforeMethod
     //facem o metoda care deschide un browser;
-    public void openBrowser() {
+    public void openBrowser(Method method) {
         driver = new ChromeDriver();
         // navigam catre pagine website-ului
         driver.get("https://www.anasofia.ro/");
         //facem fereastra browser-ului maximize
         driver.manage().window().maximize();
-        testName= this.getClass().getSimpleName();
+        testName= this.getClass().getSimpleName() + " -> " + method.getName();
         createTest(testName);
     }
     @AfterMethod

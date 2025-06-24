@@ -4,11 +4,12 @@ import pages.CartPage;
 import org.testng.annotations.Test;
 import propertyUtility.PropertyUtility;
 
+
 import java.util.List;
 
 public class CartTest extends BaseTest {
 
-    @Test
+    @Test(testName = "Add item to cart flow")
     public void addItemToCartFlow(){
         CartPage cartPage= new CartPage(driver);
         cartPage.isPageLoaded();

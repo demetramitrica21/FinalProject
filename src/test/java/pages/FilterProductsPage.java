@@ -52,6 +52,7 @@ public class FilterProductsPage extends BasePage {
         elementMethods.clickElement(dressColourLocator);
         logInfo(INFO_STEP, "Scrolling again to reach size filter");
         elementMethods.scrollPageDown("400");
+        elementMethods.setSleep(1000L);
         logInfo(INFO_STEP, "Applying 'S' size filter");
         elementMethods.clickElement(dressSizeLocator);
         logInfo(INFO_STEP, "Waiting for filtered results to load");
