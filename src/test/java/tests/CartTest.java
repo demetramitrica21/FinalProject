@@ -20,7 +20,7 @@ public class CartTest extends BaseTest {
     public void addItemToCartAndRefreshPageFlow(){
         CartPage cartPage= new CartPage(driver);
         cartPage.isPageLoaded();
-        cartPage.refreshPageAndCheckCart("rochii");
+        cartPage.addItemToCartAndRefreshPage("rochii");
         cartPage.validateThatTheItemIsStillInCartAfterPageRefresh();
     }
 

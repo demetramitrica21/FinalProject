@@ -1,14 +1,10 @@
 package pages;
 
-import extentUtility.ExtentHelper;
-import extentUtility.ReportEventType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.time.Duration;
 import java.util.List;
 
 import static extentUtility.ExtentHelper.logInfo;
@@ -65,9 +61,9 @@ public class CartPage extends BasePage {
         elementMethods.waitForElement(cartItemLocator);
     }
 
-    //Test Case 2: Refresh page and verify item persistence in cart;
+    //Test Case 2: Add a single item to cart and refresh page;
 
-    public void refreshPageAndCheckCart(String productName) {
+    public void addItemToCartAndRefreshPage(String productName) {
         addItemToCart(productName);
         //refresh the page;
         logInfo(INFO_STEP, "User refreshes the page to check cart persistence");
