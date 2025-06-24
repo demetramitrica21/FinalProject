@@ -135,4 +135,11 @@ public class ElementMethods {
             throw new RuntimeException(e);
         }
     }
+
+    public void setSleep(Long miliSeconds){
+        try {
+            Thread.sleep(3000L);
+        } catch (InterruptedException e) {
+        }
+    }
 }

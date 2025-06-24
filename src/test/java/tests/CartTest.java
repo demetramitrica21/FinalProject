@@ -4,13 +4,12 @@ import pages.CartPage;
 import org.testng.annotations.Test;
 import propertyUtility.PropertyUtility;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class CartTest extends BaseTest {
 
     @Test
-    public void addItemToCart(){
+    public void addItemToCartFlow(){
         CartPage cartPage= new CartPage(driver);
         cartPage.isPageLoaded();
         cartPage.addItemToCart("rochii");
@@ -18,7 +17,7 @@ public class CartTest extends BaseTest {
     }
 
     @Test
-    public void refreshPageAndCheckCart(){
+    public void addItemToCartAndRefreshPageFlow(){
         CartPage cartPage= new CartPage(driver);
         cartPage.isPageLoaded();
         cartPage.refreshPageAndCheckCart("rochii");
@@ -26,7 +25,7 @@ public class CartTest extends BaseTest {
     }
 
     @Test
-    public void addMultipleItemsToCart(){
+    public void addMultipleItemsToCartFlow(){
         CartPage cartPage= new CartPage(driver);
         cartPage.isPageLoaded();
         PropertyUtility propertyUtility = new PropertyUtility("CartItems");
@@ -36,7 +35,7 @@ public class CartTest extends BaseTest {
     }
 
     @Test
-    public void addMultipleItemsToCartAndRemoveThem(){
+    public void addMultipleItemsToCartAndRemoveThemFlow(){
         CartPage cartPage= new CartPage(driver);
         cartPage.isPageLoaded();
         PropertyUtility propertyUtility = new PropertyUtility("CartItems");
