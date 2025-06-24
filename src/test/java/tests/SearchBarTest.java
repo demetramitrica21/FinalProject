@@ -7,7 +7,7 @@ import propertyUtility.PropertyUtility;
 public class SearchBarTest extends BaseTest {
 
     @Test
-    public void searchNonExistingItem() {
+    public void searchNonExistingItemFlow() {
         SearchPage logInPage = new SearchPage(driver);
         logInPage.isPageLoaded();
         PropertyUtility propertyUtility = new PropertyUtility("NonExistingItem");

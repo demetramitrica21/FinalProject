@@ -6,7 +6,7 @@ import pages.FilterProductsPage;
 public class FilterProductsTest extends BaseTest {
 
     @Test
-    public void filterProductsByColorAndSize(){
+    public void filterProductsByColorAndSizeFlow(){
         FilterProductsPage productsFilterPage= new FilterProductsPage(driver);
         productsFilterPage.isPageLoaded();
         productsFilterPage.filterProductsBySizeAndColor();

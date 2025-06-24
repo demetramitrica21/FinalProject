@@ -64,23 +64,17 @@ public class FilterProductsPage extends BasePage {
             for (int i = 0; i < products.size(); i++) {
                 WebElement product = products.get(i);
                 logInfo(INFO_STEP, "Opening product #" + (i + 1));
-
                 elementMethods.clickElement(product);
                 elementMethods.scrollPageDown("300");
-
                 String actualColor = elementMethods.getTextFromElement(colourLocator);
                 logInfo(INFO_STEP, "Verifying product color. Expected: 'rosu', Found: '" + actualColor + "'");
                 Assert.assertTrue(actualColor.contains("rosu"), "Product does not contain expected color: 'rosu'");
-
                 String actualSize = elementMethods.getTextFromElement(sizeLocator);
                 logInfo(INFO_STEP, "Verifying product size. Expected: 'S', Found: '" + actualSize + "'");
                 Assert.assertTrue(actualSize.contains("S"), "Product does not contain expected size: 'S'");
-
                 logInfo(PASS_STEP, "Product #" + (i + 1) + " passed both color and size checks.");
-
                 driver.navigate().back();
             }
-
             logInfo(PASS_STEP, "All filtered products contain the expected color 'rosu' and size 'S'.");
         }
 }
