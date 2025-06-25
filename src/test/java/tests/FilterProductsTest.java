@@ -9,7 +9,7 @@ public class FilterProductsTest extends BaseTest {
     public void filterProductsByColorAndSizeFlow(){
         FilterProductsPage productsFilterPage= new FilterProductsPage(driver);
         productsFilterPage.isPageLoaded();
-        productsFilterPage.filterProductsBySizeAndColor();
+        productsFilterPage.filterProductsByRedColourAndSSize();
         productsFilterPage.validateThatProductsIncludeRedColourAndSSize();
     }
 }

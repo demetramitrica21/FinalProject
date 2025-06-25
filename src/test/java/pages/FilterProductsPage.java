@@ -39,7 +39,7 @@ public class FilterProductsPage extends BasePage {
 
     //Test case 1: Filter Products by 'Red' Color and 'S' Size;
 
-    public void filterProductsBySizeAndColor() {
+    public void filterProductsByRedColourAndSSize() {
         logInfo(INFO_STEP, "User accepts cookies if displayed");
         elementMethods.acceptCookiesPolicy(acceptCookiesLocator);
         logInfo(INFO_STEP, "User closes any visible pop-up");
