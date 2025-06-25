@@ -37,7 +37,7 @@ public class FilterProductsPage extends BasePage {
         Assert.assertEquals(elementMethods.getTextFromElement(pageTitle), "ANASOFIA", "Page is not loaded properly");
     }
 
-    //Test case 1: Filter Products by Color and Size;
+    //Test case 1: Filter Products by 'Red' Color and 'S' Size;
 
     public void filterProductsBySizeAndColor() {
         logInfo(INFO_STEP, "User accepts cookies if displayed");
