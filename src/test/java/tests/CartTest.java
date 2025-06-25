@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CartTest extends BaseTest {
 
-    @Test(testName = "Add item to cart flow")
+    @Test
     public void addItemToCartFlow(){
         CartPage cartPage= new CartPage(driver);
         cartPage.isPageLoaded();
